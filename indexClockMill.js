@@ -2,19 +2,19 @@ const fs = require("fs");
 const poemfile = `./poems.js`;
 const bookfile = `./book.js`;
 const tools = require("./tools.js");
-const mills = require("./indexCycloneFiles.js").reverse();
+const mills = require("./indexClockFiles.js").reverse();
 const dt = new Date();
 const timestamp = dt.getTime();
 const datetime = dt.toDateString();
-const description = "code art ::: algorithmic cyclone patterns";
-const rooturl = "https://cyclone.work";
-const gsurl = "https://storage.googleapis.com/noisefactory";
+const description = "code art ::: algorithmic clock patterns";
+const rooturl = "https://clockfactory.work";
+const gsurl = "https://storage.googleapis.com/clockfactory";
 const authorurl = "https://mctavish.work";
 const chosenmill = mills[tools.randominteger(0,mills.length)];
 let indexhtml = `
 <html>
 <head>
-	<title>cyclone</title>
+	<title>clock factory</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
 	<meta name="description" content="${description}"/>
@@ -27,7 +27,7 @@ let indexhtml = `
 		{
 			"@context": "http://schema.org",
 			"@type": "WebPage",
-			"name": "cyclone",
+			"name": "clock factory",
 			"breadcrumb": "core text",
 			"url": "${rooturl}",
 			"description": "${description}",
@@ -77,18 +77,16 @@ let indexhtml = `
 </head>
 <body class="" >
 <div id="mainflex">
-<main class="expand narrow" id="top">
+<main class="expand medium" id="top">
 <header>
-	<h1>cyclone</h1>
+	<h1>clock factory</h1>
 	<h2>compiled ::: <span class="small">${datetime}</span></h2>
 </header>
 <nav>
 	<ul>
 		<li><a href="https://mctavish.work/index.html" id="homelink">go to mctavish portfolio</a></li>
 		<li><a href="#videoall">composite video</a></li>
-		<li><a href="#list">cyclone sequences</a></li>
-		<!--<li><a href="#about">about</a></li>-->
-		<li><a href="#thanks">project support</a></li>
+		<li><a href="#list">clock sequences</a></li>
 	</ul>
 </nav>
 <div class="screenreader-text">
@@ -101,7 +99,7 @@ let indexhtml = `
 	<div id="content">
 	<figure>
 	<div class="vimeowrapper16x9" >
-		<iframe src="https://player.vimeo.com/video/905046109?title=0&amp;byline=0&amp;portrait=0" width="600" height="338"frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<iframe src="https://player.vimeo.com/video/904247004?title=0&amp;byline=0&amp;portrait=0" width="600" height="338"frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 	</div>
 	</figure>
 	</div>
@@ -109,7 +107,7 @@ let indexhtml = `
 
 <article id="list">
 	<header>
-		<h1>cyclone sequences</h1>
+		<h1>clock sequences</h1>
 	</header>
 	<div class="content">
 		<p>These are a series of samples/experiments that can be expanded
@@ -119,42 +117,10 @@ let indexhtml = `
 	<ul>`
 indexhtml = indexhtml + mills.map( name=>name.slice(4) ).map( name=>{
 	return	`
-		<li><a href="index${name}.html">cyclone sequence ${name}</a></li>`;
+		<li><a href="index${name}.html">clock sequence ${name}</a></li>`;
 }).join("");
 indexhtml = indexhtml + ` 
 	</ul>
-	</div>
-</article>
-<!--
-<article id="about">
-	<header>
-		<h1>notes</h1>
-	</header>
-	<div class="content">
-	<p>This is part of a larger research project into the sequences ::: the continuums
-	<ul>
-		<li>tonal fragements => sound threads</li>
-		<li>frame sequence => film</li>
-		<li>list of text & image blocks => book</li>
-		<li>list of vectors => composite image</li>
-		<li>list of composite images => prints</li>
-		<li>list of media packages => index</li>
-	</ul>
-	</p>
-	<p>I am also interested in the act of tweening ::: that discrete
-	set of bridges from one moment to the next.</p>
-	</div>
-</article>
--->
-<article id="thanks">
-	<header>
-		<h1>project support</h1>
-	</header>
-	<div class="content">
-	<p>Kathy McTavish was a fiscal year 2023 recipient of a Creative Support for Individuals grant from the Minnesota State Arts Board. This activity was made possible by the voters of Minnesota through a grant from the Minnesota State Arts Board, thanks to a legislative appropriation from the arts and cultural heritage fund.</p>
-	<p><a href="https://quiltfactory.work">the quilt factory</a></p>
-	<p>see also: <a href="https://netfactory.work">the net factory</a></p>
-	<p>see also: <a href="https://clockfactory.work">the clock factory</a></p>
 	</div>
 </article>
 </main>
@@ -180,7 +146,7 @@ mills.map( mill=> {
 			`poster0002_${s}.png`,
 			`poster0004_${s}.png`,
 		],
-		title: `cyclone ${s}`,
+		title: `clock ${s}`,
 		subtitle: `${year}.${month}.${date} ${hour}:${minute}`, 
 		url: `index${s}.html`,
 	}
@@ -248,12 +214,12 @@ mills.map( mill=> {
 <main class="expand narrow" id="top">`;
 	html = html + `
 <header>
-	<h1>cyclone sequence</h1>
+	<h1>clock sequence</h1>
 	<h2>created ::: ${mill.datetime}</h2>
 </header>
 <nav>
 	<ul>
-		<li><a href="index.html" id="indexlink">back to cyclone index</a></li>
+		<li><a href="index.html" id="indexlink">back to clock index</a></li>
 		<li><a href="https://mctavish.work/index.html" id="homelink">go to mctavish portfolio</a></li>
 		<li><a href="#audio">audio tracks</a></li>
 		<li><a href="#books">books</a></li>
