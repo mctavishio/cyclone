@@ -162,7 +162,7 @@ html = html + `
 </header>
 -->
 <header>
-	<h1>noise factory</h1>
+	<h1>cyclone</h1>
 	<h2>sketch ::: ${timestamp}</h2>
 	<h3 id="author">${book.author}</h3>
 </header>
